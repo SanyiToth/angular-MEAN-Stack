@@ -10,7 +10,7 @@ class Employee {
 })
 export class RestService {
 
-  url = 'http://localhost:3001/api/v1/employees/';
+  url = '/api/v1/employees/';
 
   constructor(private http: HttpClient) {
   }
