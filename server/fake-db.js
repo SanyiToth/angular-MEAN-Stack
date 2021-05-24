@@ -30,12 +30,20 @@ class FakeDb {
 
       const newEmployee = new Employee(employee);
 
-       newEmployee.save();
+      newEmployee.save();
     })
   }
 
+  async cleanDb() {
+    await Employee.deleteMany();
+  }
+
   seedDb() {
-    this.pushEmployeesToDb();
+    this.cleanDb()
+      .then(() => {
+      this.pushEmployeesToDb();
+    });
+
   }
 
 }
