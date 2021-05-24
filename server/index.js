@@ -1,8 +1,8 @@
 const express = require('express');
-
 const mongoose = require("mongoose");
-
 const config = require('./config/dev');
+const Employee = require('./models/employee');
+
 
 mongoose.connect(config.DB_URI, {
   useNewUrlParser: true,
